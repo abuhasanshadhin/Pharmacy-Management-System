@@ -1,0 +1,85 @@
+.pos-container{
+    background: #F6F7F9;
+    height: 100vh;
+}
+.cart-calculator{
+    background-color: #fff;
+    height: 100vh;
+}
+ul.payment-method li a {
+    height: 90px;
+    width: 90px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #b0b0b044;
+    padding: 18px 7px;
+    text-align: center;
+    border-radius: 16px;
+}
+.input-width{
+    width: 60px;
+}
+.medicine {
+    height: auto;
+    margin-bottom: 8px;
+}
+.medicine table th{
+    background-color: transparent;
+}
+.medicine table td {
+    background-color: transparent;
+    padding: 0 2px;
+}
+
+.table-input{
+    width: 62px;
+    height: 27px;
+    border: 1px solid #4444;
+    border-radius: 6px;
+    margin: 5px 0;
+}
+.medicine input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+span.text-truncate{
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+span.medicine_name {
+    width: 76px;
+}
+span.expire_date {
+    width: 80px;
+    display: block;
+    font-size: 12px;
+    padding: 2px 0px;
+    font-weight: 600;
+    color: #f58f15;
+    border-radius: 5px;
+    text-align: center;
+}
+.loading {
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: #ffffffe6;
+}
+.product-list {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.product-list {
+    max-height: 70vh;
+    overflow: hidden;
+    overflow-y: auto;
+}

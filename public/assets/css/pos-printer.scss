@@ -1,0 +1,122 @@
+.container {
+    max-width: 80mm; /* Adjust according to your printer paper width */
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+h1, p {
+    margin: 0;
+}
+h1 {
+    font-size: 16px; /* Adjust font size as needed */
+    text-align: center;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 12px; /* Adjust font size as needed */
+    line-height: 1.5;
+}
+.receipt-details {
+    border-top: 1px dashed #000;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+#invoiceModal {
+    .invoice{
+        max-width: 80mm; /* Adjust according to your printer paper width */
+        margin: 0 auto;
+        padding: 0px;
+        box-sizing: border-box;
+        table{
+            th,
+            td {
+                padding: 3px;
+            }
+        }
+        p{
+            margin-bottom: 2px;
+        }
+        .header{
+            .company-brand {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                justify-content: start;
+                img.logo{
+                    height: 40px;
+                    width: 40px;
+                    object-fit: contain;
+                }
+                span.company-name {
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin: 0;
+                    color: var(--bs-primary);
+                    text-transform: uppercase;
+                    display: inline-block;
+                    padding-top: 4px;
+                }
+            }
+            .invoice-title{
+                font-size: 18px;
+                color: var(--bs-primary);
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+        table.estimate-table td {
+            font-weight: 500;
+            font-size: 12px;
+        }
+    }
+    p{
+        margin: 0;
+    }
+    font-size: 12px;
+}
+span.table__devider {
+    border-bottom: 1px dashed #8e8e8e;
+    display: block;
+    width: 100%;
+    margin: 6px 0;
+}
+
+table.item-details-table{
+    tr{
+        th{
+            border: 0;
+        }
+        td{
+            border: 0;
+        }
+    }
+}
+
+@media print {
+    #header{
+        display: none !important;
+    }
+    #main {
+        margin-top: 0px;
+        padding: 0;
+    }
+    .pagetitle{
+        display: none;
+    }
+    .cart-calculator {
+        display: none;
+    }
+    .pos-product {
+        display: none;
+    }
+    .modal-content {
+        background: transparent;
+        border: 0;
+    }
+    .card{
+        box-shadow: none;
+    }
+    #window-printer{
+        display: none;
+    }
+}
