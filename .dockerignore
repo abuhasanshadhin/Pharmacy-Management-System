@@ -1,0 +1,58 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (will be installed during build)
+/node_modules
+/vendor
+
+# Build artifacts
+/public/build
+/public/hot
+/public/storage
+
+# Environment files
+.env
+.env.backup
+.env.production
+
+# Logs
+/storage/logs/*
+!/storage/logs/.gitignore
+
+# Tests
+/tests
+/phpunit.xml
+/phpunit.result.cache
+
+# Documentation
+*.md
+!README.md
+
+# Docker
+docker-compose*.yml
+Dockerfile
+.dockerignore
+
+# Cache
+/.phpunit.cache
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
+
+# Misc
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
