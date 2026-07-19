@@ -26,13 +26,3 @@ services:
         value: file
       - key: QUEUE_CONNECTION
         value: sync
-      - key: APP_URL
-        syncDatabaseCredential:
-          name: pharmacy-management-system-db
-          propertyUrl: DATABASE_URL
-
-  - type: database
-    name: pharmacy-management-system-db
-    plan: free
-    database: mysql
-    ipAllowList: []
