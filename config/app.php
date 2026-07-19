@@ -169,7 +169,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
+        // Debugbar - only load in production if package exists
+        ...(class_exists(\Barryvdh\Debugbar\ServiceProvider::class) ? [\Barryvdh\Debugbar\ServiceProvider::class] : []),
     ])->toArray(),
 
     /*
