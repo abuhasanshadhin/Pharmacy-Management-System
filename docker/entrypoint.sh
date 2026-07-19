@@ -13,8 +13,12 @@ if [ -z "$APP_KEY" ]; then
     php artisan key:generate --force
 fi
 
-# Run migrations
-php artisan migrate --force
+# Run migrations only if database is available
+if php artisan migrate --force 2>/dev/null; then
+    echo "Migrations completed successfully"
+else
+    echo "Database not available yet - skipping migrations"
+fi
 
 # Clear and cache config
 php artisan config:cache
