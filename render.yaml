@@ -11,7 +11,7 @@ services:
       - key: APP_KEY
         generateValue: true
       - key: DB_CONNECTION
-        value: mysql
+        value: sqlite
       - key: CACHE_DRIVER
         value: file
       - key: SESSION_DRIVER

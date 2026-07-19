@@ -13,12 +13,14 @@ if [ -z "$APP_KEY" ]; then
     php artisan key:generate --force
 fi
 
-# Run migrations only if database is available
-if php artisan migrate --force 2>/dev/null; then
-    echo "Migrations completed successfully"
-else
-    echo "Database not available yet - skipping migrations"
+# Create SQLite database if using SQLite
+if [ "$DB_CONNECTION" = "sqlite" ]; then
+    touch /var/www/html/database/database.sqlite
+    chmod 775 /var/www/html/database/database.sqlite
 fi
+
+# Run migrations
+php artisan migrate --force || echo "Migrations will run after database is ready"
 
 # Clear and cache config
 php artisan config:cache

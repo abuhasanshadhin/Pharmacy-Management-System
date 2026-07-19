@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     libjpeg62-turbo-dev \
     libwebp-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
-    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip intl \
+    && docker-php-ext-install pdo_mysql pdo_sqlite mbstring exif pcntl bcmath gd zip intl \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js 18
