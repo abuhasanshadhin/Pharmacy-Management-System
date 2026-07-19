@@ -53,11 +53,8 @@ COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Change Apache port to 8080
-RUN sed -i 's/Listen 80/Listen 8080/' /etc/apache2/ports.conf
-
-# Expose port
-EXPOSE 8080
+# Expose default port
+EXPOSE 10000
 
 # Start with entrypoint
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
