@@ -16,7 +16,8 @@ fi
 # Create SQLite database if using SQLite
 if [ "$DB_CONNECTION" = "sqlite" ]; then
     touch /var/www/html/database/database.sqlite
-    chmod 775 /var/www/html/database/database.sqlite
+    chmod 777 /var/www/html/database/database.sqlite
+    chown www-data:www-data /var/www/html/database/database.sqlite
 fi
 
 # Run migrations
