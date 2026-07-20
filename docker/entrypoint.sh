@@ -60,6 +60,7 @@ touch /var/www/html/storage/installed
 
 # Run migrations and seed
 php artisan migrate --force || true
+php artisan db:seed --force || true
 
 # Cache config
 php artisan config:cache || true
