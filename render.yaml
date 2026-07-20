@@ -14,6 +14,8 @@ services:
         value: https://pharmacy-management-system-34g5.onrender.com
       - key: DB_CONNECTION
         value: sqlite
+      - key: DB_DATABASE
+        value: /var/www/html/database/database.sqlite
       - key: CACHE_DRIVER
         value: file
       - key: SESSION_DRIVER
