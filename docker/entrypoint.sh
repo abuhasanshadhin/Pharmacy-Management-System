@@ -55,6 +55,9 @@ fi
 # Create storage link
 php artisan storage:link || true
 
+# Mark app as installed (skip Laravel Installer)
+touch /var/www/html/storage/installed
+
 # Run migrations and seed
 php artisan migrate --force || true
 
