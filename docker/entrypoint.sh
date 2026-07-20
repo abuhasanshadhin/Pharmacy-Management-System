@@ -17,6 +17,8 @@ fi
 if [ "$DB_CONNECTION" = "sqlite" ]; then
     touch /var/www/html/database/database.sqlite
     chmod 777 /var/www/html/database/database.sqlite
+    chmod 777 /var/www/html/database/
+    chown -R www-data:www-data /var/www/html/database/
     chown www-data:www-data /var/www/html/database/database.sqlite
 fi
 
