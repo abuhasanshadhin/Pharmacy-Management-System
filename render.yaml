@@ -7,9 +7,11 @@ services:
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
-        value: "false"
+        value: "true"
       - key: APP_KEY
-        generateValue: true
+        value: base64:nrjgcgJOVV0Yp+p4gQkz+9/x2v7UgvMUeuMpCu0GoP0=
+      - key: APP_URL
+        value: https://pharmacy-management-system-34g5.onrender.com
       - key: DB_CONNECTION
         value: sqlite
       - key: CACHE_DRIVER
