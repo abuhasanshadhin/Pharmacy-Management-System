@@ -25,8 +25,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+# Enable Apache mod_rewrite and headers
+RUN a2enmod rewrite && a2enmod headers
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
