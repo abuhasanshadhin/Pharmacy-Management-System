@@ -22,10 +22,10 @@ fi
 # Run migrations
 php artisan migrate --force || echo "Migrations will run after database is ready"
 
-# Clear and cache config
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
+# Clear cached config (installer will write .env later)
+php artisan config:clear || true
+php artisan route:clear || true
+php artisan view:clear || true
 
 # Create storage link
 php artisan storage:link || true
